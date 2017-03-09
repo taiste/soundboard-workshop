@@ -54,4 +54,6 @@
   (reagent/render [home-page] (.getElementById js/document "app")))
 
 (defn init! []
+  (init-context!)
+  (doseq [sound sounds] (load-sound sound))
   (mount-root))
